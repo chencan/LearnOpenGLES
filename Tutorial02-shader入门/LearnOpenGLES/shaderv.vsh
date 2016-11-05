@@ -7,10 +7,7 @@ varying lowp vec2 varyTextCoord;
 void main()
 {
     varyTextCoord = textCoordinate;
-    
     vec4 vPos = position;
-
-    vPos = vPos * rotateMatrix;
-
+    //vPos = vPos * rotateMatrix;
     gl_Position = vPos;
 }

@@ -79,12 +79,12 @@
     //前三个是顶点坐标， 后面两个是纹理坐标
     GLfloat attrArr[] =
     {
-        0.5f, -0.5f, -1.0f,     1.0f, 0.0f,
-        -0.5f, 0.5f, -1.0f,     0.0f, 1.0f,
-        -0.5f, -0.5f, -1.0f,    0.0f, 0.0f,
-        0.5f, 0.5f, -1.0f,      1.0f, 1.0f,
-        -0.5f, 0.5f, -1.0f,     0.0f, 1.0f,
-        0.5f, -0.5f, -1.0f,     1.0f, 0.0f,
+        0.5f, -0.5f, -1.0f,     1.0f, 1.0f,
+        -0.5f, 0.5f, -1.0f,     0.0f, 0.0f,
+        -0.5f, -0.5f, -1.0f,    0.0f, 1.0f,
+        0.5f, 0.5f, -1.0f,      1.0f, 0.0f,
+        -0.5f, 0.5f, -1.0f,     0.0f, 0.0f,
+        0.5f, -0.5f, -1.0f,     1.0f, 1.0f,
     };
     
     GLuint attrBuffer;
@@ -104,6 +104,7 @@
     [self setupTexture:@"for_test"];
     
     //获取shader里面的变量，这里记得要在glLinkProgram后面，后面，后面！
+    /*
     GLuint rotate = glGetUniformLocation(self.myProgram, "rotateMatrix");
     
     float radians = 10 * 3.14159f / 180.0f;
@@ -120,7 +121,7 @@
     
     //设置旋转矩阵
     glUniformMatrix4fv(rotate, 1, GL_FALSE, (GLfloat *)&zRotation[0]);
-    
+    */
     glDrawArrays(GL_TRIANGLES, 0, 6);
     
     [self.myContext presentRenderbuffer:GL_RENDERBUFFER];
